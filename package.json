@@ -5,6 +5,23 @@
   "main": "index.js",
   "author": "giuem <giuemcom@gmail.com>",
   "license": "MIT",
+  "keywords": [
+    "hexo",
+    "style",
+    "typography"
+  ],
+  "files": [
+    "lib",
+    "index.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/giuem/hexo-typography.git"
+  },
+  "homepage": "https://github.com/giuem/hexo-typography#readme",
+  "bugs": {
+    "url": "https://github.com/giuem/hexo-typography/issues"
+  },
   "dependencies": {
     "typography": "^0.16.19"
   },
