@@ -1,13 +1,26 @@
 const Typography = require('typography')
+const inject = require('./lib/inject')
+const resolveTheme = require('./lib/resolve-theme')
+const log = hexo.log
 
-const typography = new Typography({
-  baseFontSize: '18px',
-  baseLineHeight: 1.45,
-  headerFontFamily: ['Avenir Next', 'Helvetica Neue', 'Segoe UI', 'Helvetica', 'Arial', 'sans-serif'],
-  bodyFontFamily: ['Georgia', 'serif'],
-  // See below for the full list of options.
-})
+if (!hexo.config.typography || !hexo.config.typography.theme) {
+  return
+}
 
+const { theme } = hexo.config.typography
+const themeConfig = resolveTheme(theme)
+if (!themeConfig) {
+  log.warn(`
+Typography theme ${theme} is not installed.
+To install it, try:
+  npm install ${theme} or yarn add ${theme}`
+  .trim())
+  return
+}
+
+const typography = new Typography(themeConfig)
 const styles = typography.toString()
 
-console.log(styles)
+hexo.extend.filter.register('after_render:html', function after_render(html) {
+  return inject(html, styles)
+})
