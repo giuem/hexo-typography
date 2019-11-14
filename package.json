@@ -1,0 +1,14 @@
+{
+  "name": "hexo-typography",
+  "version": "1.0.0",
+  "description": "Bring typography.js to Hexo",
+  "main": "index.js",
+  "author": "giuem <giuemcom@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "typography": "^0.16.19"
+  },
+  "devDependencies": {
+    "@types/hexo": "^3.8.2"
+  }
+}
