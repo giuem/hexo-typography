@@ -1,8 +1,10 @@
 # hexo-typography
 
-[typography.js](https://github.com/KyleAMathews/typography.js) with Hexo
+[typography.js](https://github.com/KyleAMathews/typography.js) with Hexo, inject typography.js style to your site.
 
 ## Installation
+
+Using npm
 
 ``` bash
 npm install hexo-typography
@@ -33,5 +35,5 @@ For more themes, [see here](https://github.com/KyleAMathews/typography.js#publis
 
 ## TODO
 
-[] ability to customize theme
-[] allow to inject external stylesheet
+- [ ] ability to customize theme
+- [ ] allow to inject external stylesheet
